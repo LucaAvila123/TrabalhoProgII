@@ -820,7 +820,7 @@ void FormaArquivoDeTabuleiro(int argc, char * argv[argc]){
         int tabuleiro[10][10];
 
         srand(time(NULL)); //o numero de valores aleatorios gerados pra cada valor de seed eh suficiente para gerar um tabuleiro valido
-        
+        //int x = 0;
         while(1){
             for(i=0; i<5; i++){
                 FormaFraseNavioAleatorio(string[i], i);
@@ -828,6 +828,8 @@ void FormaArquivoDeTabuleiro(int argc, char * argv[argc]){
             }
             MontaTabuleiro(navios, tabuleiro, 5);
             if(VerificaTabuleiro(navios, tabuleiro, 5)) break; //so para quando o tabuleiro for valido
+            //x++;
+            //printf("HAHA OTARIO %d\n", x); //apenas vendo quantos tabuleiros sao recusados
         }
 
         tabuleiroFormado = fopen(diretorio, "w");
